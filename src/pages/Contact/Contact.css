@@ -1,0 +1,37 @@
+#contactContainer
+{
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+    background-color: white;
+}
+
+#imgDiv
+{
+    animation : fadeIn 1.2s;
+}
+#imgDiv , #cardsDiv
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+#mobile
+{
+  animation: slideUp 1s;
+}
+#mail
+{
+  animation: slideUp 1.3s;
+}
+#location
+{
+  animation: slideUp 1.5s;
+}
+img
+{
+    width:50%;
+   
+}
