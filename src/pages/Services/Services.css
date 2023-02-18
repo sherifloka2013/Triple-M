@@ -1,0 +1,112 @@
+#cardsContainer
+{
+    display: flex;
+}
+
+.cardServ{
+    position: relative;
+display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 1rem;
+    margin: 1rem;
+    width: 100%;
+    min-width: 150px;
+    min-height: 350px;
+    text-align: center;
+    color: whitesmoke;
+    background-color:rgb(122, 122, 122);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 10%), 0 4px 4px rgb(0 0 0 / 10%), 0 8px 8px rgb(0 0 0 / 10%), 0 16px 16px rgb(0 0 0 / 10%);
+}
+.cardServ:hover
+{
+    cursor: pointer;
+}
+.cardServ:hover .content
+{
+    transform: translateY(0);
+}
+
+.cardServ:hover::before
+{
+    transform: translateY(-4%);
+}
+.cardServ:hover::after
+{
+    transform: translateY(-50%);
+}
+.content
+{
+    z-index: 1;
+    transition : 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: translateY(80%);
+}
+
+.cardServ::after{
+    transition : 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+    background-image: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 0%, 0) 0%,
+      hsla(0, 0%, 0%, 0.009) 11.7%,
+      hsla(0, 0%, 0%, 0.034) 22.1%,
+      hsla(0, 0%, 0%, 0.072) 31.2%,
+      hsla(0, 0%, 0%, 0.123) 39.4%,
+      hsla(0, 0%, 0%, 0.182) 46.6%,
+      hsla(0, 0%, 0%, 0.249) 53.1%,
+      hsla(0, 0%, 0%, 0.320) 58.9%,
+      hsla(0, 0%, 0%, 0.394) 64.3%,
+      hsla(0, 0%, 0%, 0.468) 69.3%,
+      hsla(0, 0%, 0%, 0.540) 74.1%,
+      hsla(0, 0%, 0%, 0.607) 78.8%,
+      hsla(0, 0%, 0%, 0.668) 83.6%,
+      hsla(0, 0%, 0%, 0.721) 88.7%,
+      hsla(0, 0%, 0%, 0.762) 94.1%,
+      hsla(0, 0%, 0%, 0.790) 100%
+    );
+}
+
+.cardServ::before
+{
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-size: cover;
+    background-position: 0 0;
+    pointer-events: none;
+    background-image: url(https://c1.wallpaperflare.com/preview/532/665/142/electricity-sun-wind-forces-of-nature.jpg);
+}
+
+.cardServ:hover .copy
+{
+    opacity: 1;
+}
+
+.copy
+{
+    opacity: 0;
+}
+.btn
+{
+    cursor: pointer;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    border: none;
+}
