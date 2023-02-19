@@ -1,24 +1,63 @@
 import React  from "react";
+import axios from "axios";
 import contentBG from '../../assets/contentBG.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBullseye , faEye , faPeopleCarryBox,
          faPeopleArrows,faSeedling,faArrowsToEye , faArrowUpRightDots, faTrowelBricks} from '@fortawesome/free-solid-svg-icons'
+
+         const baseURL = "http://78.47.134.53:8055/graphql";
+
+         var aboutData ={};
+
 const About= () => {
-  
+    var data = JSON.stringify({
+      query: `{
+      __typename
+      About_Us {
+        Header
+        date_created
+        date_updated
+        id
+        Content_A
+        Content_B
+        status
+      }
+    }`,
+      variables: {}
+    });
+    
+    var config = {
+      method: 'post',
+    maxBodyLength: Infinity,
+      url: baseURL,
+      headers: { 
+        'Content-Type': 'application/json'
+      },
+      data : data
+    };
+    
+    axios(config)
+    .then(function (response) {
+        
+       aboutData = {h3:(response.data['data']['About_Us'][0]['Header'])
+       ,p1:(response.data['data']['About_Us'][0]['Content_A']),
+       p2:(response.data['data']['About_Us'][0]['Content_B'])};
+       console.log(aboutData);
+ 
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
         return (
         <div id="aboutContainer" className="container">
             <h2>
                 About us 
             </h2>
-            <h3>Company profile</h3>
+            <h3>{aboutData.h3}</h3>
             <div id="firstParag"> 
                 <div>
-                    <p>Triple M Construction Company has been established as Construction Company in Egypt. Our traditional business model is based on the public contracting .construction works and renewable energy (wind and solar energy establishments). (civil and electric works)
-                        Our company established in 2015 as apart from safa construction group especially for renewable energy projects in Egypt.
-                    </p>
-                    <p>
-                    Our company owned and manages by professional manager. Our owner is chairman and owner for both companies Triple M and safa construction group our chairman has experience more than 20 years in construction fields and environmental projects.
-                    </p>
+                    <p>{aboutData.p1}</p>
+                    <p>{aboutData.p2}</p>
                 </div>
                 <img src={contentBG} alt='Company profile'/>
             </div>
