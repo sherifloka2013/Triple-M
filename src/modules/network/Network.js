@@ -1,13 +1,18 @@
-import Axios, {AxiosInstance} from "axios";
+import axios from "axios";
+const baseURL = "http://78.47.134.53:8055/graphql";
+axios.defaults.baseURL = baseURL;
+axios.defaults.headers = {'Content-Type': 'application/json'}
 
-// baseURL: "https://derbyaalnagib.herokuapp.com/"
-// baseURL: "http://192.168.1.15:3001/api"
-// baseURL: "https://derbyaalnagib.com/api"
-// const baseURL:string = "http://localhost:3001/api"
-//const baseURL:string = "/api"
 
-const NetworkHelper: AxiosInstance = Axios.create({
-  baseURL
-});
-
-export { NetworkHelper,baseURL };
+export default {
+  about: {
+    getAboutData(body) {
+      return axios.post("",body);
+    },
+        },
+  services: {
+    getServices(body){
+      return axios.post("/studies",body);
+          }
+        }
+}

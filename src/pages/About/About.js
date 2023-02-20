@@ -1,63 +1,49 @@
-import React  from "react";
-import axios from "axios";
+import React  , {useEffect,useState} from "react";
 import contentBG from '../../assets/contentBG.png'
+import Network from "../../modules/Network/Network";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBullseye , faEye , faPeopleCarryBox,
          faPeopleArrows,faSeedling,faArrowsToEye , faArrowUpRightDots, faTrowelBricks} from '@fortawesome/free-solid-svg-icons'
-
-         const baseURL = "http://78.47.134.53:8055/graphql";
-
-         var aboutData ={};
-
-const About= () => {
-    var data = JSON.stringify({
-      query: `{
-      __typename
-      About_Us {
-        Header
-        date_created
-        date_updated
-        id
-        Content_A
-        Content_B
-        status
-      }
-    }`,
-      variables: {}
-    });
+var aboutData ={};
+var data = JSON.stringify({
+            query: `{
+            __typename
+            About_Us {
+              Header
+              Content_A
+              Content_B
+              status
+            }
+          }`
+          });
+    const About= () => {
+    const [dataa, setdataa] = useState('');
+    useEffect(() => {
+            console.log('Data loaded');
+            Network.about.getAboutData(data)
+            .then(function (response) {
+               aboutData = {h3:(response.data['data']['About_Us'][0]['Header'])
+               ,p1:(response.data['data']['About_Us'][0]['Content_A']),
+               p2:(response.data['data']['About_Us'][0]['Content_B'])};
+               setdataa(aboutData)
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        }, [])
     
-    var config = {
-      method: 'post',
-    maxBodyLength: Infinity,
-      url: baseURL,
-      headers: { 
-        'Content-Type': 'application/json'
-      },
-      data : data
-    };
     
-    axios(config)
-    .then(function (response) {
-        
-       aboutData = {h3:(response.data['data']['About_Us'][0]['Header'])
-       ,p1:(response.data['data']['About_Us'][0]['Content_A']),
-       p2:(response.data['data']['About_Us'][0]['Content_B'])};
-       console.log(aboutData);
- 
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+
         return (
         <div id="aboutContainer" className="container">
             <h2>
                 About us 
             </h2>
-            <h3>{aboutData.h3}</h3>
+            <h3>{dataa.h3}</h3>
             <div id="firstParag"> 
                 <div>
-                    <p>{aboutData.p1}</p>
-                    <p>{aboutData.p2}</p>
+                    <p>{dataa.p1}</p>
+                    <p>{dataa.p2}</p>
                 </div>
                 <img src={contentBG} alt='Company profile'/>
             </div>
