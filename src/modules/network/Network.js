@@ -12,7 +12,7 @@ export default {
         },
   services: {
     getServices(body){
-      return axios.post("/studies",body);
+      return axios.post("",body);
           }
         }
 }

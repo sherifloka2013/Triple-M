@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@700;800&display=swap');
+#intro
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10%;
+    color: white;
+}
+
+#title
+{
+    font-size: 6em;
+    letter-spacing: 25px;
+    font-family: 'Genos', sans-serif;
+    text-shadow: 6px 4px 10px #0000005e;
+}
+
+#slogan
+{
+    margin-top: 10px;
+    font-size: 2em;
+    font-style: italic;
+    letter-spacing: 3px;
+    height: 50px;
+    overflow: hidden;
+}
+
+#slogan ul
+{
+    padding-left: 8px;
+text-shadow: 0 0 13px #0000005e;
+    animation: change 10s infinite;
+    transform:translate3d(0,0,0);
+}
+
+@keyframes change {
+    0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+    16.66%, 29.32% {transform:translate3d(0,-22%,0);}
+    33.32%,45.98% {transform:translate3d(0,-42%,0);}
+    49.98%,62.64% {transform:translate3d(0,-62%,0);}
+    66.64%,79.3% {transform:translate3d(0,-84%,0);}
+    83.3%,95.96% {transform:translate3d(0,-84%,0);}
+  }
+  
+
+
+@keyframes slideUp {
+    0% {
+
+    }
+    25%
+    {
+
+    }
+    50%{
+
+    }
+    75%
+    {
+
+    }
+}
