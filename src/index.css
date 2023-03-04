@@ -4,8 +4,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: #edf0f1; */
+  height: 100%;
   
-  height: 100vh;
 }
 * {
   box-sizing: border-box;
@@ -22,6 +22,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 100vh;
 }
 
 
