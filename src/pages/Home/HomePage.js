@@ -5,7 +5,7 @@ const HomePage = () => {
 
         return (
         <div id="homeContainer">
-           <div id="intro">
+           <section id="intro">
                 <p id="title">TRIPLE-M</p>
                 <div id="slogan">
                 <ul> 
@@ -16,10 +16,18 @@ const HomePage = () => {
                     <li>& More..</li>
                 </ul> 
                 </div>
-           </div>
-           <div id="History">
-
-           </div>
+           </section>
+           <section id="History">
+                <div>
+                    <div>
+                        <span>1998</span>
+                        <span>Icon</span>
+                    </div>
+                    <div>
+                        <p>ay kalam</p>
+                    </div>
+                </div>
+           </section>
         </div>
         );
 };
