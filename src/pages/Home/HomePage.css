@@ -148,7 +148,7 @@ text-shadow: 0 0 13px #0000005e;
 }
 @media screen and (max-width: 600px) {
     body {
-        background: #8bfff4;
+        background: white;
    }
     .timeline ul li {
         margin-left: 20px;

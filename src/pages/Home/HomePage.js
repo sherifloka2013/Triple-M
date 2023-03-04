@@ -86,6 +86,18 @@ Established branch in Jordan as executive arm for Triple M construction for Rene
                     </li>
                 </ul>
             </section>
+
+            <section id="partners">
+                <div class='partnerContainer'>
+                    <img src='' alt='partner'/>
+                </div>
+                <div class='partnerContainer'>
+                    <img src='' alt='partner'/>
+                </div>
+                <div class='partnerContainer'>
+                    <img src='' alt='partner'/>
+                </div>
+            </section>
         </div>
         );
 };
