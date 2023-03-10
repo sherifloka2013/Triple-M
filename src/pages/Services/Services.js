@@ -10,25 +10,25 @@ const Services= () => {
 
             
         <div id="cardsContainer">
-            <div class="cardServ">
-                <div class="content">
-                    <h3 class="title">Solar Energy</h3>
-                    <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
-                    <button class="btn">Read more</button>
+            <div className="cardServ">
+                <div className="content">
+                    <h3 className="title">Solar Energy</h3>
+                    <p className="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+                    <button className="btn">Read more</button>
                 </div>
             </div>
-            <div class="cardServ">
-                <div class="content">
-                    <h3 class="title">Solar Energy</h3>
-                    <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
-                    <button class="btn">Read more</button>
+            <div className="cardServ">
+                <div className="content">
+                    <h3 className="title">Solar Energy</h3>
+                    <p className="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+                    <button className="btn">Read more</button>
                 </div>
             </div>
-            <div class="cardServ">
-                <div class="content">
-                    <h3 class="title">Solar Energy</h3>
-                    <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
-                    <button class="btn">Read more</button>
+            <div className="cardServ">
+                <div className="content">
+                    <h3 className="title">Solar Energy</h3>
+                    <p className="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+                    <button className="btn">Read more</button>
                 </div>
             </div>
         </div>

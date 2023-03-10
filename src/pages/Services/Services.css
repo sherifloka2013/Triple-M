@@ -110,3 +110,12 @@
     background-color: black;
     border: none;
 }
+@media screen and (max-width: 900px) {
+#cardsContainer
+  {    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+    
+}

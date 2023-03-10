@@ -1,6 +1,7 @@
 import React  , {useEffect,useState} from "react";
 import contentBG from '../../assets/contentBG.png'
 import Network from "../../modules/Network/Network";
+import './About.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBullseye , faEye , faPeopleCarryBox,
          faPeopleArrows,faSeedling,faArrowsToEye , faArrowUpRightDots, faTrowelBricks} from '@fortawesome/free-solid-svg-icons'

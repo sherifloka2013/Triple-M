@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
+    transition: all 0.3s ease-in-out;
 }
 
 #NavBar ul
@@ -12,6 +12,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 60%;
+    transition: all 0.3s ease-in-out;
 }
 
 #NavBar ul a{
@@ -21,8 +22,6 @@
 }
 #NavBar ul a:hover
 {
-   
-   
     color: #faa61a
 }
 
@@ -39,3 +38,62 @@
 }
 
 /* sun color #faa61b , wind mill color #0089d0*/
+
+#navBtn
+{
+    color: white;
+    display: none;
+    cursor: pointer;
+    font-size: xx-large;
+}
+
+
+
+@media (max-width:1200px) {
+/*     to be added on click of navBtn
+#contactContainer , #homeContainer , #aboutContainer , .container
+{
+    display: none;
+} */
+#homeContainer
+    {
+        display: inline-block;
+    }
+#NavBar
+{
+
+width: 100%;
+display: block;
+    }
+#navBtn {
+    display: block;
+    margin: 0 10px;
+    float: right;
+}
+
+#logo {
+    margin-left: 10px;
+    float: left;
+}
+
+#NavBar ul {
+    width: 100%;
+    float: left;
+    display: none; /* to be block when navBtn clicked*/
+    margin: 0px auto;
+    text-align: center;
+   
+}
+
+#check:checked ~ ul
+{
+    display: block;
+    animation : fadeIn 1.2s;
+    
+}
+
+}
+
+@media (max-width:600px){
+    
+}

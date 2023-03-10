@@ -51,8 +51,9 @@ text-shadow: 0 0 13px #0000005e;
   
 
 
-.timeline
+.timeline 
 {
+    
     background-color: white;
     width: 100%;
     padding: 20px;
@@ -139,6 +140,13 @@ text-shadow: 0 0 13px #0000005e;
     opacity: 1;
 }
 @media screen and (max-width: 900px) {
+
+    #title
+    {
+        font-size: 5em;
+    letter-spacing: 24px;
+    }
+
     .timeline ul li div {
         width: 250px;
         flex-direction: column;
@@ -155,15 +163,31 @@ text-shadow: 0 0 13px #0000005e;
     body {
         background: white;
    }
+   #title
+    {
+        font-size: 3em;
+    letter-spacing: 10px;
+    }
+
+    #slogan {
+        text-align: center;
+        width: 100%;
+        font-size:  1.5em;
+    }
     .timeline ul li {
-        margin-left: 20px;
-   }
+            width: auto;
+            background-color: transparent;
+            }
     .timeline ul li div {
         width: calc(100vw - 91px);
    }
-    .timeline ul li:nth-of-type(even) > div {
-        left: 45px;
-   }
+   .timeline ul li:nth-of-type(odd) > div  , .timeline ul li:nth-of-type(even) > div{
+    left: 0px;
+}
+
+.timeline ul li::after {
+    background-color: transparent;
+}
 }
 
 .sectionTitle

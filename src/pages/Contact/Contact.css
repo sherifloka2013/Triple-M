@@ -35,3 +35,33 @@ img
     width:50%;
    
 }
+
+
+
+@media screen and (max-width: 900px) {
+  #cardsDiv
+    {
+      flex-direction: column;
+    }
+  #cardsDiv .card
+    {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    #cardsDiv .card svg
+    {
+      font-size: 50px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    #imgDiv
+    {
+      display: none;
+    }
+    
+    
+
+    
+  }
