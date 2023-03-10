@@ -16,7 +16,7 @@
 }
 
 #NavBar ul a{
-    color: antiquewhite;
+    color: white;
     transition: all 0.3s ease-in-out;
     font-size: larger;
 }

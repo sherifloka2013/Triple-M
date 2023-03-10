@@ -10,6 +10,7 @@ import { REEF } from "../../pages/REEF/REEF";
 import { News } from "../../pages/News/News";
 import { Careers } from "../../pages/Careers/Careers";
 import { Contact } from "../../pages/Contact/Contact";
+import {Footer} from "../../components/Footer/Footer";
 
 const AppRouter = () => {
 
@@ -33,7 +34,8 @@ const AppRouter = () => {
 
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={<ErrorPage />}/>
-      </Routes>
+        </Routes>
+      <Footer />
     </Router>
     </>
   );
